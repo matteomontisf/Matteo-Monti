@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matteo Monti | CV Digitale</title>
+
+<!-- Google Font (Montserrat-like) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#c9a44a;
+  --bg-light:#ffffff;
+  --bg-dark:#111111;
+  --text-light:#000000;
+  --text-dark:#ffffff;
+}
+
+body{
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background:var(--bg-light);
+  color:var(--text-light);
+  scroll-behavior:smooth;
+  transition:0.4s;
+}
+
+body.dark{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+}
+
+section{
+  padding:80px 10%;
+}
+
+h1,h2,h3{
+  margin:0 0 20px;
+}
+
+h1{font-size:48px;}
+h2{font-size:32px; color:var(--gold);}
+h3{font-size:20px;}
+
+.gold{color:var(--gold);}
+.italic{font-style:italic;}
+
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s;
+}
+.fade.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:40px;
+}
+
+.profile-pic{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:4px solid var(--gold);
+  object-fit:cover;
+}
+
+.info i{color:var(--gold); margin-right:8px;}
+
+.lang-switch img{
+  width:32px;
+  border-radius:50%;
+  cursor:pointer;
+  margin-right:10px;
+}
+
+/* TIMELINE */
+.timeline{
+  display:grid;
+  gap:20px;
+}
+
+.job{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  border:2px solid var(--gold);
+  padding:20px;
+}
+
+.job img{
+  width:120px;
+  object-fit:contain;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  text-align:center;
+}
+
+.skill{
+  border:2px solid var(--gold);
+  padding:20px;
+}
+
+/* CERTIFICAZIONI */
+.certs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+  text-align:center;
+}
+
+.certs img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--gold);
+}
+
+/* ISTRUZIONE */
+.edu{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:40px;
+}
+
+.edu img{width:200px;}
+
+/* DOWNLOAD */
+.download{
+  text-align:center;
+}
+
+.download a{
+  display:inline-block;
+  padding:15px 40px;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.download a:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* TOGGLES */
+.top-controls{
+  position:fixed;
+  top:15px;
+  right:20px;
+  display:flex;
+  gap:15px;
+  z-index:999;
+}
+
+button{
+  background:none;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  padding:6px 10px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-controls">
+  <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<!-- HERO -->
+<section class="fade">
+  <h1>MATTEO MONTI</h1>
+  <h3>Media Intelligence Specialist | Communication Advisor | Copywriter</h3>
+
+  <div class="header">
+    <img class="profile-pic" src="https://pbs.twimg.com/profile_images/1145704304319315970/z0qDo_m4.jpg">
+
+    <div class="info">
+      <p>📍 08/09/1989, Roma (Italia)</p>
+      <p><i class="fa fa-envelope"></i> matteo.monti.sf@gmail.com</p>
+      <p><i class="fa fa-mobile"></i> (+39)333-4873350</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/matteomontisf/" target="_blank">LinkedIn</a></p>
+
+      <div class="lang-switch">
+        <img src="https://flagcdn.com/w40/it.png" onclick="setLang('it')">
+        <img src="https://flagcdn.com/w40/gb.png" onclick="setLang('en')">
+        <img src="https://flagcdn.com/w40/es.png" onclick="setLang('es')">
+      </div>
+    </div>
+  </div>
+
+  <p class="italic">
+    <span class="gold">“</span>
+    Da tredici anni mi occupo quotidianamente di monitoraggio e relazione con i media, intercettando nell'attualità l'evoluzione dei mercati...
+    <span class="gold">”</span>
+  </p>
+</section>
+
+<!-- EVOLUZIONE -->
+<section class="fade">
+<h2>EVOLUZIONE PROFESSIONALE</h2>
+<div class="timeline">
+  <div class="job"><img src="https://static.wixstatic.com/media/288c3f_efa9ddd66ee44e53bc92b7b5abd2e573~mv2_d_3000_1314_s_2.png"><strong>MEDIA INTELLIGENCE SPECIALIST</strong><em> da novembre 2023</em></div>
+  <div class="job"><img src="https://www.datastampa.it/wp-content/uploads/2021/10/logo-1981-500x100-1.png"><strong>KEY ACCOUNT MANAGER</strong><em> dicembre 2018 – novembre 2023</em></div>
+  <div class="job"><img src="https://www.sipo.it/wp-content/uploads/2022/03/logo-web-transparent.png"><strong>COPYWRITER</strong><em> giugno 2022 – dicembre 2022</em></div>
+  <div class="job"><img src="https://isay.group/wp-content/uploads/2021/05/logo-1.png"><strong>COMMUNICATION ADVISOR</strong><em> settembre 2018 – novembre 2018</em></div>
+  <div class="job"><img src="https://www.telpress.it/wp-content/uploads/2024/01/logo-no-40.png"><strong>MEDIA EDITOR</strong><em> luglio 2017 – aprile 2018</em></div>
+  <div class="job"><img src="https://www.siap-polizia.org/media/131/14393588069664/repubblica-logo.png"><strong>GIORNALISTA</strong><em> settembre 2013 – giugno 2017</em></div>
+  <div class="job"><img src="https://public.laroma24.it/logo.png?qc-size=293,76"><strong>WEB EDITOR</strong><em> gennaio 2013 – agosto 2015</em></div>
+  <div class="job"><img src="https://www.teleradiostereo.it/wp-content/uploads/2024/06/cropped-6-7-5.png"><strong>RADIO-TV HOST</strong><em> gennaio 2014 – agosto 2015</em></div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="fade">
+<h2>COMPETENZE</h2>
+<div class="skills">
+  <div class="skill"><i class="fa fa-newspaper"></i><br><strong>RASSEGNA STAMPA</strong></div>
+  <div class="skill"><i class="fa fa-chart-line"></i><br><strong>ANALISI MEDIA</strong></div>
+  <div class="skill"><i class="fa fa-users"></i><br><strong>MEDIA RELATIONS</strong></div>
+  <div class="skill"><i class="fa fa-pen"></i><br><strong>COPYWRITING</strong></div>
+  <div class="skill"><i class="fa fa-robot"></i><br><strong>SCRITTURA AI</strong></div>
+</div>
+</section>
+
+<!-- CERTIFICAZIONI -->
+<section class="fade">
+<h2>CERTIFICAZIONI</h2>
+<div class="certs">
+  <div><img src="https://odg.bo.it/wp-content/uploads/logo-senza-scritta-odg-nazionale-1.jpg"><h3>TESSERA N.161909</h3><p class="italic">Ordine Nazionale dei Giornalisti (2015)</p></div>
+  <div><img src="https://www.camcom.bz.it/sites/default/files/uploaded_files/Comunicati_stampa/Logo%20Eccellenze%20in%20Digitale.png"><h3>ECCELLENZE IN DIGITALE</h3><p class="italic">Google (2017)</p></div>
+  <div><img src="https://www.victoriaschool.it/wp-content/uploads/2024/09/Logo-73720-Trinity.jpeg"><h3>TRINITY C1 ENG</h3><p class="italic">UK & Irlanda</p></div>
+</div>
+</section>
+
+<!-- ISTRUZIONE -->
+<section class="fade">
+<h2>ISTRUZIONE E FORMAZIONE</h2>
+<div class="edu">
+<img src="https://www.athenaassociati.it/files/logo-luiss.png">
+<div>
+<p class="gold">SCIENZE DI GOVERNO E DELLA COMUNICAZIONE PUBBLICA</p>
+<p>Laureato in Semiotica dei Nuovi Media (2015)</p>
+<p class="gold">SCIENZE POLITICHE E DELLA COMUNICAZIONE</p>
+<p>Laureato in Semiotica (2011)</p>
+</div>
+</div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="fade download">
+<h2>DOWNLOAD CV</h2>
+<a href="cv-matteo-monti.pdf" download>SCARICA PDF</a>
+</section>
+
+<script>
+const fades=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  fades.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add('visible');
+    }
+  })
+});
+
+function toggleTheme(){
+  document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
